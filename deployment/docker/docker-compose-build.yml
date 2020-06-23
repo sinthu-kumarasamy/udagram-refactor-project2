@@ -1,0 +1,21 @@
+version: '3'
+services:
+  udagram-user:
+    build:
+      context: ../../udagram-user-api
+      dockerfile: Dockerfile
+    image: udagram-user
+  udagram-feed:
+    build:
+      context: ../../udagram-feed-api
+      dockerfile: Dockerfile
+    image: udagram-feed
+  reverseproxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: reverseproxy
+  udagram-frontend:
+    build:
+      context: ../../udagram-frontend  
+    image: udagram-frontend
