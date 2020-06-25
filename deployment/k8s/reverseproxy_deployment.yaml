@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
@@ -15,7 +15,7 @@ spec:
         service: reverseproxy
     spec:
       containers:
-      - image: sinthuk/reverseproxy:latest
+      - image: sinthuk/reverseproxy
         name: reverseproxy
         imagePullPolicy: Always          
         resources:
